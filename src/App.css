@@ -1,4 +1,4 @@
-.App {
+\.App {
   text-align: center;
 }
 
@@ -26,3 +26,59 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.ant-input-group-wrapper, .ant-input-wrapper, .ant-input-group, .anticon, .anticon-calendar, .ant-input-group-addon {
+  display:inline-block;
+}
+.ant-input-group-wrapper, .ant-input-wrapper, .ant-input-group {
+  width: 268px;
+  height: 50px; 
+}
+
+.content{
+  width:1024px;
+}
+.content .header .headerleft {
+  float: left;
+}
+
+.content .header .headerright {
+  float: right;
+}
+
+.content .header .headerleft .ant-input {
+  width: 200px;
+  height: 32px; 
+  margin: 8px 0px 8px 8px;
+  padding: 0;
+  border-right: none;
+}
+
+.content .header .headerleft span .text{
+  display:inline-block;
+  height: 41px; 
+  line-height:41px;
+}
+.content .header .headerleft .ant-input-group-addon {
+  height: 32px; 
+  margin-top: 8px;
+  position: relative;
+}
+
+.content .header .headerleft .anticon, .anticon-calendar {
+  line-height:30px;
+  right: 4px;
+  position: absolute;
+}
+
+.content .header .headerleft button {
+  height: 32px; 
+  margin: 8px 0 0 0;
+}
+
+.content .header .headerleft button span {
+  height: 32px; 
+  margin: 10px, 0, 0, 10px;
+  line-height:32px;
+}
+
