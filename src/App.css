@@ -1,7 +1,3 @@
-\.App {
-  text-align: center;
-}
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -27,6 +23,28 @@
   to { transform: rotate(360deg); }
 }
 
+/******************************全部样式*****************************************/
+/*修改以及清除所有相关默认样式*/
+/*清空默认边距*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
 .ant-input-group-wrapper, .ant-input-wrapper, .ant-input-group, .anticon, .anticon-calendar, .ant-input-group-addon {
   display:inline-block;
 }
@@ -37,15 +55,27 @@
 
 .content{
   width:1024px;
+  font-size:14px;
+	color: #313131; 
 }
+
+/******************************hearder样式*****************************************/
+/*清除header浮动*/
+.content .header{
+  overflow: hidden;
+}
+
+/*左header浮动*/
 .content .header .headerleft {
   float: left;
 }
 
+/*右header浮动*/
 .content .header .headerright {
   float: right;
 }
 
+/*左header日期输入框*/
 .content .header .headerleft .ant-input {
   width: 200px;
   height: 32px; 
@@ -54,11 +84,14 @@
   border-right: none;
 }
 
+/*左header日期文字*/
 .content .header .headerleft span .text{
   display:inline-block;
   height: 41px; 
   line-height:41px;
 }
+
+/*左header日历ICON*/
 .content .header .headerleft .ant-input-group-addon {
   height: 32px; 
   margin-top: 8px;
@@ -71,14 +104,88 @@
   position: absolute;
 }
 
+/*左header按钮*/
 .content .header .headerleft button {
   height: 32px; 
   margin: 8px 0 0 0;
 }
 
+/*左header按钮文字*/
 .content .header .headerleft button span {
   height: 32px; 
   margin: 10px, 0, 0, 10px;
   line-height:32px;
 }
 
+/*右header按钮*/
+.content .header .headerright button {
+  height: 32px; 
+  margin: 8px 0 0 0;
+}
+
+/*右header按钮文字*/
+.content .header .headerright button span {
+  height: 32px; 
+  margin: 10px, 0, 0, 10px;
+  line-height:32px;
+}
+
+/******************************table样式*****************************************/
+.content .tablecontent, .content .tablecontent {
+  padding: 20px 0 20px 0;
+}
+
+.content .tablecontent, .content .tablecontent table {
+  width:100%;
+  line-height:40px;
+}
+
+.content .tablecontent, .content .tablecontent table tr {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.content .tablecontent table thead tr{
+  background-color: #fafafa;
+  font-size:16px;
+}
+
+/* 修改表格内确认值输入框的宽度 */
+.content .tablecontent table tbody tr td input[type=number] {
+  width:150px;
+}
+
+/* 修改表格内checkbox的宽度 */
+.content .tablecontent table thead tr th input[type=checkbox], .content .tablecontent table tbody tr td input[type=checkbox] {
+  width:18px;
+  margin-top:12px;
+}
+
+.content .tablecontent table thead tr th:nth-child(1), .content .tablecontent table tbody tr td:nth-child(1){
+  width:5%;
+  padding-left:20px;
+}
+
+.content .tablecontent table thead tr th:nth-child(2), .content .tablecontent table tbody tr td:nth-child(2){
+  width:15%;
+}
+
+.content .tablecontent table thead tr th:nth-child(3), .content .tablecontent table tbody tr td:nth-child(3){
+  width:15%;
+}
+
+.content .tablecontent table thead tr th:nth-child(4), .content .tablecontent table tbody tr td:nth-child(4){
+  width:15%;
+}
+
+.content .tablecontent table thead tr th:nth-child(5), .content .tablecontent table tbody tr td:nth-child(5){
+  width:15%;
+}
+
+.content .tablecontent table thead tr th:nth-child(6), .content .tablecontent table tbody tr td:nth-child(6){
+  width:20%;
+}
+
+.content .tablecontent table thead tr th:nth-child(7), .content .tablecontent table tbody tr td:nth-child(7){
+  width:15%;
+  padding-right:20px;
+}
