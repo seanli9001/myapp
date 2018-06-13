@@ -83,7 +83,6 @@ time, mark, audio, video {
   height: 32px; 
   margin: 8px 0px 8px 8px;
   padding: 0;
-  border-right: none;
 }
 
 /*左header日期文字*/
@@ -109,7 +108,7 @@ time, mark, audio, video {
 /*左header按钮*/
 .content .header .headerleft button {
   height: 32px; 
-  margin: 8px 0 0 0;
+  margin: 8px 0 0 40px;
 }
 
 /*左header按钮文字*/
@@ -154,7 +153,7 @@ time, mark, audio, video {
 }
 
 /* 修改表格内确认值输入框的宽度 */
-.content .tablecontent table tbody tr td input[type=number] {
+.content .tablecontent table tbody tr td input[type=text] {
   width:150px;
 }
 
