@@ -61,7 +61,7 @@ time, mark, audio, video {
 }
 
 .box .content{
-  width:60%;
+  width:70%;
   padding:0 20px;
 }
 
@@ -141,7 +141,7 @@ time, mark, audio, video {
 
 .content .tablecontent, .content .tablecontent table {
   width:100%;
-  line-height:40px;
+  line-height:50px;
 }
 
 .content .tablecontent, .content .tablecontent table tr {
@@ -158,14 +158,14 @@ time, mark, audio, video {
   width:150px;
 }
 
-/* 修改表格内checkbox的宽度 */
+/* 修改表格内checkbox的宽度 （复选框已删除）
 .content .tablecontent table thead tr th input[type=checkbox], .content .tablecontent table tbody tr td input[type=checkbox] {
   width:18px;
   margin-top:12px;
-}
+}*/
 
 .content .tablecontent table thead tr th:nth-child(1), .content .tablecontent table tbody tr td:nth-child(1){
-  width:5%;
+  width:20%;
   padding-left:20px;
 }
 
@@ -182,14 +182,10 @@ time, mark, audio, video {
 }
 
 .content .tablecontent table thead tr th:nth-child(5), .content .tablecontent table tbody tr td:nth-child(5){
-  width:15%;
-}
-
-.content .tablecontent table thead tr th:nth-child(6), .content .tablecontent table tbody tr td:nth-child(6){
   width:20%;
 }
 
-.content .tablecontent table thead tr th:nth-child(7), .content .tablecontent table tbody tr td:nth-child(7){
+.content .tablecontent table thead tr th:nth-child(6), .content .tablecontent table tbody tr td:nth-child(6){
   width:15%;
   padding-right:20px;
 }

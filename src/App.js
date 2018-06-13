@@ -4,9 +4,24 @@ import logo from './logo.svg';
 import './App.css';
 import {Button, Input, Icon} from 'antd';
 
+const demoArray = [
+  {Name: '高压蒸汽', UOM:'吨', TagName:'4FIQ5002', Value:'124', ValueConfirm: '', Description: '高压蒸汽投入'},
+  {Name: '高压蒸汽2', UOM:'吨', TagName:'4FIQ5002', Value:'124', ValueConfirm: '', Description: '高压蒸汽投入'},
+  {Name: '高压蒸汽', UOM:'吨', TagName:'4FIQ5002', Value:'124', ValueConfirm: '', Description: '高压蒸汽投入'},
+  {Name: '高压蒸汽2', UOM:'吨', TagName:'4FIQ5002', Value:'124', ValueConfirm: '', Description: '高压蒸汽投入'},
+  {Name: '高压蒸汽', UOM:'吨', TagName:'4FIQ5002', Value:'124', ValueConfirm: '', Description: '高压蒸汽投入'},
+  {Name: '高压蒸汽2', UOM:'吨', TagName:'4FIQ5002', Value:'124', ValueConfirm: '', Description: '高压蒸汽投入'},
+  {Name: '高压蒸汽', UOM:'吨', TagName:'4FIQ5002', Value:'124', ValueConfirm: '', Description: '高压蒸汽投入'},
+  {Name: '高压蒸汽2', UOM:'吨', TagName:'4FIQ5002', Value:'124', ValueConfirm: '', Description: '高压蒸汽投入'},
+  {Name: '高压蒸汽', UOM:'吨', TagName:'4FIQ5002', Value:'124', ValueConfirm: '', Description: '高压蒸汽投入'},
+  {Name: '高压蒸汽2', UOM:'吨', TagName:'4FIQ5002', Value:'124', ValueConfirm: '', Description: '高压蒸汽投入'},
+  {Name: '高压蒸汽2', UOM:'吨', TagName:'4FIQ5002', Value:'124', ValueConfirm: '', Description: '高压蒸汽投入'}
+]
+
 class App extends Component {
   state = {
-    text: ''
+    text: '',
+    demoArray: demoArray
   }
 
   handleClick = () => {
@@ -21,7 +36,7 @@ class App extends Component {
       })
     }
   }
-  
+
   render() {
     return (
       <div className="App">
@@ -49,7 +64,6 @@ class App extends Component {
             <table>
               <thead>
                 <tr>
-                  <th><Input placeholder="确认值" type="checkbox"/></th>
                   <th>项目</th>
                   <th>位号</th>
                   <th>单位</th>
@@ -59,105 +73,16 @@ class App extends Component {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td><Input placeholder="确认值" type="checkbox"/></td>
-                  <td>高压蒸汽</td>
-                  <td>4FIQ5002</td>
-                  <td>吨</td>
-                  <td></td>
-                  <td><Input placeholder="确认值" type="number"/></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><Input placeholder="确认值" type="checkbox"/></td>
-                  <td>中压蒸汽</td>
-                  <td>4FIQ5007</td>
-                  <td>吨</td>
-                  <td></td>
-                  <td><Input placeholder="确认值" type="number"/></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><Input placeholder="确认值" type="checkbox"/></td>
-                  <td>低压蒸汽</td>
-                  <td>4FIQ5006</td>
-                  <td>千克</td>
-                  <td></td>
-                  <td><Input placeholder="确认值" type="number"/></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><Input placeholder="确认值" type="checkbox"/></td>
-                  <td>天然气</td>
-                  <td>4FIQ3301</td>
-                  <td>标准立方</td>
-                  <td></td>
-                  <td><Input placeholder="确认值" type="number"/></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><Input placeholder="确认值" type="checkbox"/></td>
-                  <td>循环水（循环）</td>
-                  <td>4FIQ5003</td>
-                  <td>立方</td>
-                  <td></td>
-                  <td><Input placeholder="确认值" type="number"/></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><Input placeholder="确认值" type="checkbox"/></td>
-                  <td>低温水（循环）</td>
-                  <td>4FIQ5004</td>
-                  <td>立方</td>
-                  <td></td>
-                  <td><Input placeholder="确认值" type="number"/></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><Input placeholder="确认值" type="checkbox"/></td>
-                  <td>冷冻水</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td><Input placeholder="确认值" type="number"/></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><Input placeholder="确认值" type="checkbox"/></td>
-                  <td>仪表风</td>
-                  <td>4FIQ5005</td>
-                  <td>标准立方</td>
-                  <td></td>
-                  <td><Input placeholder="确认值" type="number"/></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><Input placeholder="确认值" type="checkbox"/></td>
-                  <td>N2（总）</td>
-                  <td>4FIQ5001</td>
-                  <td>标准立方</td>
-                  <td></td>
-                  <td><Input placeholder="确认值" type="number"/></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><Input placeholder="确认值" type="checkbox"/></td>
-                  <td>碱液</td>
-                  <td>4FIQ4006</td>
-                  <td>吨</td>
-                  <td></td>
-                  <td><Input placeholder="确认值" type="number"/></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><Input placeholder="确认值" type="checkbox"/></td>
-                  <td>污水</td>
-                  <td>手动输入</td>
-                  <td>吨</td>
-                  <td></td>
-                  <td><Input placeholder="确认值" type="number"/></td>
-                  <td></td>
-                </tr>
+                {this.state.demoArray.map((data, index)=> (
+                  <tr key={index}>
+                    <td>{data.Name}</td>
+                    <td>{data.UOM}</td>
+                    <td>{data.TagName}</td>
+                    <td>{data.Value}</td>
+                    <td>{data.ValueConfirm}</td>
+                    <td>{data.Description}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
