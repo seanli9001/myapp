@@ -53,26 +53,28 @@ time, mark, audio, video {
   height: 50px; 
 }
 
-.content{
-  width:1024px;
+.box{
   font-size:14px;
-	color: #313131; 
+  color: #313131;
+  display: flex;
+  justify-content:flex-end;
+}
+
+.box .content{
+  width:60%;
+  padding:0 20px;
 }
 
 /******************************hearder样式*****************************************/
-/*清除header浮动*/
-.content .header{
-  overflow: hidden;
-}
+ .content .header {
+  display: inline-flex;
+  flex-wrap:nowrap;
+  justify-content: space-between;
+  width:100%;
+} 
 
-/*左header浮动*/
-.content .header .headerleft {
-  float: left;
-}
-
-/*右header浮动*/
 .content .header .headerright {
-  float: right;
+  justify-content:  flex-end;
 }
 
 /*左header日期输入框*/
@@ -133,6 +135,8 @@ time, mark, audio, video {
 /******************************table样式*****************************************/
 .content .tablecontent, .content .tablecontent {
   padding: 20px 0 20px 0;
+  flex-wrap:wrap;
+  width:60%;
 }
 
 .content .tablecontent, .content .tablecontent table {
