@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Button, Input, DatePicker } from 'antd';
+import Game from './Game/Game';
 
 const demoArray = [
   { Name: '高压蒸汽', UOM: '吨', TagName: '4FIQ5002', Value: 124, ValueConfirm: 124, Description: '高压蒸汽投入' },
@@ -54,7 +55,9 @@ class App extends Component {
     })
 
   }
-
+  
+ //elements.map(item => {return item.ValueConfirm}) 与 
+ //elements.map(function(item){return item.ValueConfirm})一样
   handleSubmit = () => {
     let data = this.state.demoArrayData.map(item => {
       return item.ValueConfirm * 1
@@ -115,6 +118,7 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <Game />
       </div>
     );
   }
