@@ -36,24 +36,6 @@ class Board extends React.Component {
     //         xIsNext: true,
     //     };
     // }
-
-    //slice(),先复制之前的this.state.squares,这样之前的squares不会别修改，squares[i]='X'，修改的只是新的 squares
-    handleClick = (i) => {
-        const history = this.state.history;
-        const current = history[history.length - 1];
-        const squares = current.squares.slice();
-        if (calculateWinner(squares) || squares[i]) {
-          return;
-        }
-        squares[i] = this.state.xIsNext ? 'X' : 'O';
-        this.setState({
-          history: history.concat([{
-            squares: squares,
-          }]),
-          xIsNext: !this.state.xIsNext,
-        });
-    }
-
     //Board组件传递state里面的值与Board handleClick函数给Square的props。
     renderSquare(i) {
         return (
@@ -110,6 +92,7 @@ function calculateWinner(squares) {
 class Game extends React.Component {
     constructor(props) {
         super(props);
+        console.log(this);
         this.state = {
             history: [{
                 squares: Array(9).fill(null),
@@ -117,6 +100,24 @@ class Game extends React.Component {
             xIsNext: true,
         };
     }
+
+     //slice(),先复制之前的this.state.squares,这样之前的squares不会别修改，squares[i]='X'，修改的只是新的 squares
+     handleClick = (i) => {
+        const history = this.state.history;
+        const current = history[history.length - 1];
+        const squares = current.squares.slice();
+        if (calculateWinner(squares) || squares[i]) {
+          return;
+        }
+        squares[i] = this.state.xIsNext ? 'X' : 'O';
+        this.setState({
+          history: history.concat([{
+            squares: squares,
+          }]),
+          xIsNext: !this.state.xIsNext,
+        });
+    }
+
     render() {
         const history = this.state.history;
         const current = history[history.length - 1];
@@ -131,7 +132,10 @@ class Game extends React.Component {
         return (
             <div className="game">
                 <div className="game-board">
-                    <Board />
+                    <Board 
+                        squares={current.squares}
+                        onClick={(i) => this.handleClick(i)}
+                    />
                 </div>
                 <div className="game-info">
                     <div>{status}</div>
