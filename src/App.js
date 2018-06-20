@@ -67,13 +67,13 @@ class App extends Component {
       data: data,
     }
     this.columns = [
-      { title: '项目', width: 100, dataIndex: 'Name', key: 'projectName', fixed: 'left' },
-      { title: '位号', width: 100, dataIndex: 'TagName', key: 'tagName', fixed: 'left' },
+      { title: '项目', width: '100', dataIndex: 'Name', key: 'projectName', fixed: 'left',  },
+      { title: '位号', dataIndex: 'TagName', key: 'tagName'},
       { title: '单位', dataIndex: 'UOM', key: 'UOM' },
       { title: '原始值', dataIndex: 'Value', key: 'originalValue' },
       {
         title: '确认值', dataIndex: 'ValueConfirm', key: 'confirmValue', render: (text, record) => {
-          return <Input value={text} onChange={(ev) => { this.handleConfirmValueChange(ev, record) }} />
+          return <Input style={{width: 160}} value={text} onChange={(ev) => { this.handleConfirmValueChange(ev, record) }} />
         }
       },
       { title: '备注', dataIndex: 'Description', key: 'noteText' }
@@ -102,7 +102,7 @@ class App extends Component {
                 <Button type={'primary'} onClick={this.handleSubmit}>上报</Button>
               </div>
             </div>
-            <div>
+            <div className="table">
               <Table columns={this.columns} dataSource={this.state.data} pagination={{ pageSize: 12 }} rowKey={record => record.TagName} scroll={{ x: 1024 }} />
             </div>
             {/* <div className="tablecontent">
