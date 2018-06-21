@@ -4,17 +4,17 @@ import './App.css';
 import { Button, Input, DatePicker, Table } from 'antd';
 
 const data = [
-  { Name: '高压蒸汽', UOM: '吨', TagName: '4FIQ5002', Value: 124, ValueConfirm: 124, Description: '高压蒸汽投入' },
-  { Name: '高压蒸汽2', UOM: '吨', TagName: '4FIQ5003', Value: 124, ValueConfirm: 124, Description: '高压蒸汽投入' },
-  { Name: '高压蒸汽', UOM: '吨', TagName: '4FIQ5004', Value: 124, ValueConfirm: 124, Description: '高压蒸汽投入' },
-  { Name: '高压蒸汽2', UOM: '吨', TagName: '4FIQ5005', Value: 124, ValueConfirm: 124, Description: '高压蒸汽投入' },
-  { Name: '高压蒸汽', UOM: '吨', TagName: '4FIQ5006', Value: 124, ValueConfirm: 124, Description: '高压蒸汽投入' },
-  { Name: '高压蒸汽2', UOM: '吨', TagName: '4FIQ5007', Value: 124, ValueConfirm: 124, Description: '高压蒸汽投入' },
-  { Name: '高压蒸汽', UOM: '吨', TagName: '4FIQ5008', Value: 124, ValueConfirm: 124, Description: '高压蒸汽投入' },
-  { Name: '高压蒸汽2', UOM: '吨', TagName: '4FIQ5009', Value: 124, ValueConfirm: 124, Description: '高压蒸汽投入' },
-  { Name: '高压蒸汽', UOM: '吨', TagName: '4FIQ5010', Value: 124, ValueConfirm: 124, Description: '高压蒸汽投入' },
-  { Name: '高压蒸汽2', UOM: '吨', TagName: '4FIQ5011', Value: 124, ValueConfirm: 124, Description: '高压蒸汽投入' },
-  { Name: '高压蒸汽2', UOM: '吨', TagName: '4FIQ5012', Value: 124, ValueConfirm: 124, Description: '高压蒸汽投入' }
+  { Name: '高压蒸汽', UOM: '吨', TagName: '4FIQ5002', Value: 124, ValueConfirm: 124, ConfirmWebId: 'a',   Description: '高压蒸汽投入' },
+  { Name: '高压蒸汽2', UOM: '吨', TagName: '4FIQ5003', Value: 124, ValueConfirm: 124, ConfirmWebId: 'b',  Description: '高压蒸汽投入' },
+  { Name: '高压蒸汽', UOM: '吨', TagName: '4FIQ5004', Value: 124, ValueConfirm: 124, ConfirmWebId: 'c', Description: '高压蒸汽投入' },
+  { Name: '高压蒸汽2', UOM: '吨', TagName: '4FIQ5005', Value: 124, ValueConfirm: 124, ConfirmWebId: 'd',  Description: '高压蒸汽投入' },
+  { Name: '高压蒸汽', UOM: '吨', TagName: '4FIQ5006', Value: 124, ValueConfirm: 124, ConfirmWebId: 'e',   Description: '高压蒸汽投入' },
+  { Name: '高压蒸汽2', UOM: '吨', TagName: '4FIQ5007', Value: 124, ValueConfirm: 124, ConfirmWebId: 'f',  Description: '高压蒸汽投入' },
+  { Name: '高压蒸汽', UOM: '吨', TagName: '4FIQ5008', Value: 124, ValueConfirm: 124, ConfirmWebId: 'g', Description: '高压蒸汽投入' },
+  { Name: '高压蒸汽2', UOM: '吨', TagName: '4FIQ5009', Value: 124, ValueConfirm: 124, ConfirmWebId: 'h',   Description: '高压蒸汽投入' },
+  { Name: '高压蒸汽', UOM: '吨', TagName: '4FIQ5010', Value: 124, ValueConfirm: 124, ConfirmWebId: 'i', Description: '高压蒸汽投入' },
+  { Name: '高压蒸汽2', UOM: '吨', TagName: '4FIQ5011', Value: 124, ValueConfirm: 124, ConfirmWebId: 'j',  Description: '高压蒸汽投入' },
+  { Name: '高压蒸汽2', UOM: '吨', TagName: '4FIQ5012', Value: 124, ValueConfirm: 124,  ConfirmWebId: 'k', Description: '高压蒸汽投入' }
 ]
 
 class App extends Component {
@@ -47,10 +47,20 @@ class App extends Component {
     })
   }
   handleSubmit = () => {
-    let submitConfirmValue = this.state.data.map(item => {
-      return item.ValueConfirm * 1
-    })
-    console.log(submitConfirmValue);
+    let submitConfirmObject = [] 
+    this.state.data.forEach(item => {
+      submitConfirmObject.push({
+        "Value": item.ValueConfirm * 1,
+        "ConfirmWebId": item.ConfirmWebId
+      }) 
+      }
+    )
+    console.log (submitConfirmObject)
+    // let submitConfirmObject = [] 
+    // for(let i = 0; i < data.length; i++) {
+    //   submitConfirmObject.push({"ValueConfirm": data[i].ValueConfirm*1, "ConfirmWebId": data[i].ConfirmWebId})
+    // }
+    // console.log(submitConfirmObject);
   }
   constructor(props) {
     super(props);
